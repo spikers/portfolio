@@ -75,7 +75,7 @@
 <div id="about"  class="container spacer about">
 <!--<h2 class="text-center wowload fadeInUp" id="title">Tim Feng</h2>-->
 <h2 class="text-center wowload fadeInUp" id="title">Back End Web Developer</h2>
-<p class="text-center wowload fadeInUp" id="subsubtitle"><a href="http://github.com/spikers">GitHub</a></p>
+<p class="text-center wowload fadeInUp" id="subsubtitle"><a href="http://github.com/spikers" target="blank">GitHub</a></p>
   <div class="row">
     <div class="col-sm-12 wowload fadeInLeft">
       <p>I learned HTML and CSS a decade ago. I became proficient at front end technologies and began building websites in plain HTML and CSS using Windows Notepad. </p>
@@ -129,7 +129,7 @@
 <div id="works"  class="clearfix grid">
     <h2 class="text-center wowload fadeInUp">Projects</h2>
     <figure class="effect-oscar wowload fadeInUp">
-        <img src="images/portfolio/6.jpg" alt="img01"/>
+        <img src="images/portfolio/wynkworld.jpg" alt="Wynk.World, the blind dating solution." />
         <figcaption>
             <h2>Wynk.World</h2>
             <p>From “Hello” to “Coffee?” is a huge jump. Let Wynk handle the date, just show up.<br>
@@ -137,7 +137,7 @@
         </figcaption>
     </figure>
     <figure class="effect-oscar wowload fadeInUp">
-        <img src="images/portfolio/7.jpg" alt="img01"/>
+        <img src="images/portfolio/curbstore.jpg" alt="CurbStore, selling simplified." />
         <figcaption>
             <h2>CurbStore</h2>
             <p>Application for setting up a personal shop anywhere. TechCrunch Disrupt 2016.<br>
@@ -145,7 +145,7 @@
         </figcaption>
     </figure>
     <figure class="effect-oscar wowload fadeInUp">
-        <img src="images/portfolio/2.jpg" alt="img01"/>
+        <img src="images/portfolio/connect4.jpg" alt="Connect 4, a fresh take on an old classic."/>
         <figcaption>
             <h2>Connect-4</h2>
             <p>Bomberman-themed Connect 4 game where players can remove enemy pieces.<br>
@@ -159,17 +159,20 @@
 <script>
   var figure = document.getElementsByTagName('figure');
   figure[0].addEventListener('click', function (e) {
-    e.stopPropagation();
-    window.open('http://wynk.world', '_blank');
+    openSite('http://wynk.world', e);
   });
   figure[1].addEventListener('click', function (e) {
-    e.stopPropagation();
-    window.open('https://spikers.github.io/Disrupt2016/', '_blank');
+    openSite('https://spikers.github.io/Disrupt2016/', e);
   });
   figure[2].addEventListener('click', function (e) {
-    e.stopPropagation();
-    window.open('https://breathics.github.io/C1.17_connect/', '_blank');
+    openSite('https://breathics.github.io/C1.17_connect/', e);
   });
+
+  function openSite(url, e) {
+    if (e.target.tagName === "A") return;
+    e.stopPropagation();
+    window.open(url, '_blank');
+  }
 </script>
 
 <!--Contact Starts-->
@@ -203,26 +206,12 @@
 <!-- Footer Starts -->
 <div class="footer text-center spacer">
 <p class="wowload flipInX">
-  <a href="http://linkedin.com/in/tim-feng"><i class="fa fa-linkedin fa-2x"></i></a>
-  <a href="http://github.com/spikers"><i class="fa fa-github fa-2x"></i></a>
+  <a href="http://linkedin.com/in/tim-feng" target="blank"><i class="fa fa-linkedin fa-2x"></i></a>
+  <a href="http://github.com/spikers" target="blank"><i class="fa fa-github fa-2x"></i></a>
 </p>
 Copyright 2017 Tim Feng. All rights reserved.
 </div>
 <!-- # Footer Ends -->
-
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title">Title</h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
-</div>
-
-
 
 <!-- jquery -->
 <script src="assets/jquery.js"></script>
